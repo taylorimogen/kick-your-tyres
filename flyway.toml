@@ -9,8 +9,8 @@ outOfOrder = true
 schemaModelLocation = "schema-model"
 validateMigrationNaming = true
 
-[flyway.check]
-majorTolerance = 0
+  [flyway.check]
+  majorTolerance = 0
 
 [flywayDesktop]
 developmentEnvironment = "development"
@@ -18,3 +18,7 @@ shadowEnvironment = "shadow"
 
 [redgateCompare]
 filterFile = "filter.rgf"
+
+[environments.production]
+url = "jdbc:sqlite:kick-the-tyres-production.sqlite"
+user = "sa"
