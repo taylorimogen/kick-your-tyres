@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Build
         shell: pwsh
-        run: ./.github/workflows/install-flyway.ps1
+        run: .github/workflows/install-flyway.ps1
       - run: flyway prepare -source=schemaModel -target=production
       - run: flyway deploy -environment=production
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
