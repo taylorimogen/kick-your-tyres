@@ -1,0 +1,20 @@
+databaseType = "Sqlite"
+id = "5f78059a-225c-46e9-b167-4d859cee5e80"
+name = "kick-the-tyres"
+
+[flyway]
+locations = [ "filesystem:migrations" ]
+mixed = true
+outOfOrder = true
+schemaModelLocation = "schema-model"
+validateMigrationNaming = true
+
+[flyway.check]
+majorTolerance = 0
+
+[flywayDesktop]
+developmentEnvironment = "development"
+shadowEnvironment = "shadow"
+
+[redgateCompare]
+filterFile = "filter.rgf"
